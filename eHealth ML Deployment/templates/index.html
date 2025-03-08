@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>eHealth Test ML API</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+  
+</head>
+
+<body>
+ <div class="login">
+	<h1>Covid19 Prediction</h1>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post">
+    	<input type="text" name="Sex" placeholder ="Sex" required= "required" />
+		<input type="text" name="Birth Year" placeholder ="Birth Year" required= "required" />
+		<input type="text" name="Chest pain" placeholder ="Chest pain" required= "required" />
+		<input type="text" name="Chills or sweats" placeholder ="Chills or sweats" required= "required" />
+		<input type="text" name="Confused or disoriented" placeholder ="Confused or disoriented" required= "required" />
+		<input type="text" name="Cough" placeholder ="Cough" required= "required" />
+		<input type="text" name="Diarrhea" placeholder ="Diarrhea" required= "required" />
+		<input type="text" name="Difficulty breathing or Dyspnea" placeholder ="Difficulty breathing or Dyspnea" required= "required" />
+		<input type="text" name="Digested blood or coffee grounds in vomit" placeholder ="Digested blood or coffee grounds in vomit" required= "required" />
+		<input type="text" name="Pain behind eyes or Sensitivity to light" placeholder ="Pain behind eyes or Sensitivity to light" required= "required" />
+		<input type="text" name="Bleeding from the eyes" placeholder ="Bleeding from the eyes" required= "required" />
+		<input type="text" name="Fatigue or general weakness" placeholder ="Fatigue or general weakness" required= "required" />
+		<input type="text" name="Fever" placeholder ="Fever" required= "required" />
+		<input type="text" name="Fluid in the lung cavity" placeholder ="Fluid in the lung cavity" required= "required" />
+		<input type="text" name="Fluid in lung cavity in auscultation" placeholder ="Fluid in lung cavity in auscultation" required= "required" />
+		<input type="text" name="Fluid in cavity through X-Ray" placeholder ="Fluid in cavity through X-Ray" required= "required" />
+		<input type="text" name="Bleeding of the gums" placeholder ="Bleeding of the gums" required= "required" />
+		<input type="text" name="Headache" placeholder ="Headache" required= "required" />
+		<input type="text" name="Joint pain or arthritis" placeholder ="Joint pain or arthritis" required= "required" />
+		<input type="text" name="Thorax (sore throat)" placeholder ="Thorax (sore throat)" required= "required" />
+		<input type="text" name="Malaise" placeholder ="Malaise" required= "required" />
+		<input type="text" name="Muscle pain" placeholder ="Muscle pain" required= "required" />
+		<input type="text" name="Nausea" placeholder ="Nausea" required= "required" />
+		<input type="text" name="Other clinical symptoms" placeholder ="Other clinical symptoms" required= "required" />
+		<input type="text" name="Pharyngeal exudate" placeholder ="Pharyngeal exudate" required= "required" />
+		<input type="text" name="Rapid breathing" placeholder ="Rapid breathing" required= "required" />
+		<input type="text" name="Runny nose" placeholder ="Runny nose" required= "required" />
+		<input type="text" name="Maculopapular rash" placeholder ="Maculopapular rash" required= "required" />
+		<input type="text" name="Sore throat or pharyngitis" placeholder ="Sore throat or pharyngitis" required= "required" />
+		<input type="text" name="Bleeding or bruising" placeholder ="Bleeding or bruising" required= "required" />
+		<input type="text" name="Vomiting" placeholder ="Vomiting" required= "required" />
+		<input type="text" name="Abnormal lung X-Ray findings" placeholder ="Abnormal lung X-Ray findings" required= "required" />
+		<input type="text" name="Conjunctivitis" placeholder ="Conjunctivitis" required= "required" />
+		<input type="text" name="Acute respiratory distress syndrome" placeholder ="Acute respiratory distress syndrome" required= "required" />
+		<input type="text" name="Pneumonia (clinical or radiologic)" placeholder ="Pneumonia (clinical or radiologic)" required= "required" />
+		<input type="text" name="Loss of Taste" placeholder ="Loss of Taste" required= "required" />
+		<input type="text" name="Loss of Smell" placeholder ="Loss of Smell" required= "required" />
+		<input type="text" name="Cough with sputum" placeholder ="Cough with sputum" required= "required" />
+		<input type="text" name="Cough with heamoptysis" placeholder ="Cough with heamoptysis" required= "required" />
+		<input type="text" name="Enlarged lymph nodes" placeholder ="Enlarged lymph nodes" required= "required" />
+		<input type="text" name="Wheezing" placeholder ="Wheezing" required= "required" />
+		<input type="text" name="Skin ulcers" placeholder ="Skin ulcers" required= "required" />
+		<input type="text" name="Inability to walk" placeholder ="Inability to walk" required= "required" />
+		<input type="text" name="Indrawing of chest wall" placeholder ="Indrawing of chest wall" required= "required" />
+		<input type="text" name="Other complications" placeholder ="Other complications" required= "required" />
+		<input type="text" name="Specify other complications" placeholder ="Specify other complications" required= "required" />
+		
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+
+   <br>
+   <br>
+   {{ prediction_text }}
+
+ </div>
+
+
+</body>
+</html>
